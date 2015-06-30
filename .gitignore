@@ -4,6 +4,9 @@ _data
 # Ignore bower packages
 public/bower
 
+# Ignore node modules (doh)
+node_modules
+
 # Logs
 logs
 *.log
