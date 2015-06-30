@@ -1,6 +1,9 @@
 # Ignore database
 _data
 
+# Ignore bower packages
+bower_components
+
 # Logs
 logs
 *.log
