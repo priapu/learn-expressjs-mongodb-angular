@@ -22,4 +22,17 @@ router.post('/', function(req, res, next) {
     });
 });
 
+/* DELETE a user. */
+router.delete('/:id', function(req, res, next) {
+    var db = req.db;
+    var collection = db.get('usercollection');
+    var userToDelete = req.params.id;
+    collection.remove({'_id': userToDelete}, function(err){
+        (err === null) ? message='User deleted successfully.' : message='Could not delete user.'
+        res.json({
+            'message': message
+        });
+    });
+});
+
 module.exports = router;

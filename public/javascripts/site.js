@@ -23,6 +23,15 @@ angular.module('learnExpress', [])
             });
     };
 
+    $scope.deleteUser = function(input) {
+        $http.delete('/users/'+input)
+            .then(function(data){
+                console.log(data.data.message);
+                $scope.getUsers();
+                $scope.input = {};
+            });
+    };
+
     // Init
 
     $scope.getUsers();

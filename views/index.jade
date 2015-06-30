@@ -16,7 +16,8 @@ block content
                     td {{ key+1 }}
                     td {{ user.username }}
                     td {{ user.email }}
-                    td Actions here
+                    td
+                        a(class='pointer', data-ng-click='deleteUser(user._id)') Delete
 
         h2 Add user
 
