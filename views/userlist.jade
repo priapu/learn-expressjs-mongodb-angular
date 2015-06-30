@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1= title
+  p Big fat user list
+
+    ul
+        each user, i in userlist
+            li
+                a(href="mailto:#{user.email}")= user.username
