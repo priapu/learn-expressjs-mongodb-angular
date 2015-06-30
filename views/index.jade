@@ -18,5 +18,16 @@ block content
                     td {{ user.email }}
                     td Actions here
 
+        h2 Add user
+
+        form
+            div.form-group
+                label(for='inputUsername') User name
+                input(type='text', placeholder='Enter user name', class='form-control', id='inputUsername', data-ng-model='input.username')
+            div.form-group
+                label(for='inputEmail') Email
+                input(type='email', placeholder='Enter user email', class='form-control', id='inputEmail', data-ng-model='input.email')
+            button(type='submit', class='btn btn-primary', data-ng-click='addUser(input)') Add user
+
     script(src='/bower/angular/angular.min.js')
     script(src='/javascripts/site.js')

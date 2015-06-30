@@ -10,4 +10,16 @@ router.get('/', function(req, res, next) {
   });
 });
 
+/* POST a user. */
+router.post('/', function(req, res, next) {
+    var db = req.db;
+    var collection = db.get('usercollection');
+    collection.insert(req.body, function(err, result){
+        (err === null) ? message='User inserted successfully.' : message='Could not insert user.'
+        res.json({
+            'message': message
+        });
+    });
+});
+
 module.exports = router;
