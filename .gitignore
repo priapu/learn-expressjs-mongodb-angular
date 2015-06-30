@@ -2,7 +2,7 @@
 _data
 
 # Ignore bower packages
-bower_components
+public/bower
 
 # Logs
 logs
