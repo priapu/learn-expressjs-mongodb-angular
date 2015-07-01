@@ -7,5 +7,6 @@ I've also included Bootstrap also because it's quicker for me to build on top of
 # Setting up
 * Clone the repo.
 * `bower install && npm install`.
-* Setup the MongoDB daemon in `localhost:27017/learnexpress`. If you're using another database name, change the `learnexpress` bit.
+* Create a `_data` directory for the MongoDB database to live `mkdir _data && cd $_`
+* Run MongoDB daemon `mongod --dbpath .`
 * `npm start` to serve, web app then can be accessed at `http://localhost:3000/`
